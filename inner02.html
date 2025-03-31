@@ -92,7 +92,7 @@
                                 </a>
                             </div>
                             <div class="action-wrap">
-                                <a href="" class="btn">
+                                <a href="" class="btn js-popup-open" data-popup="popup-callback">
                                     <div class="button-title">Оставить заявку</div>
                                 </a>
                             </div>
@@ -1017,7 +1017,7 @@
                                 <input type="text" class="form-input inp-large" placeholder="E-mail">
                             </div>
                             <div class="frm-field field-half">
-                                <input type="text" class="form-input inp-large" placeholder="Телефон">
+                                <input type="tel" class="form-input inp-large" placeholder="Телефон">
                             </div>
                         </div>
                         <div class="frm-row">
@@ -1270,6 +1270,39 @@
             </div>
         </footer>
         <!-- /footer -->
+
+
+        <div class="popup-outer-box" id="popup-callback">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Заказать звонок</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, harum!</p>
+                </div>
+                <div class="popup-content-wrap">
+                    <form action="/" class="frm-popup">
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" placeholder="Ваше имя" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="tel" placeholder="Ваш телефон" class="form-input">
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field field-info">
+                                Нажимая на кнопку «Зарегистрироваться», вы соглашаетесь с <a href="" class="link-main">политикой конфиденциальности</a> <a href="" class="link-main">пользовательским соглашением</a>
+                            </div>
+                            <div class="frm-field field-button">
+                                <button type="submit" class="btn">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
 
     </div>
     <!-- /wrap -->

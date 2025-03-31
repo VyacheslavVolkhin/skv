@@ -1,9 +1,60 @@
+//phone mask
+document.addEventListener('DOMContentLoaded', function() {
+
+	const inputs = document.querySelectorAll('[type="tel"]');
+
+	
+	inputs.forEach(input => {
+		input.addEventListener('focus', () => {
+			if (input.value === '') {
+				input.value = '(';
+			}
+		});
+		input.addEventListener('input', (e) => {
+
+			let value = e.target.value.replace(/\D/g, '');
+	
+			if (value.length > 10) {
+				value = value.substring(0, 10);
+			}
+	
+			if (value.length > 0) {
+				value = '+7' + value;
+			}
+	
+			if (value.length > 2) {
+				value = '(' + value.substring(2);
+			}
+			if (value.length > 3) {
+				value = value.substring(0, 4) + ')' + value.substring(4);
+			}
+			if (value.length > 4) {
+				value = value.substring(0, 5) + ' ' + value.substring(5);
+			}
+			if (value.length > 8) {
+				value = value.substring(0, 9) + '-' + value.substring(9);
+			}
+			if (value.length > 11) {
+				value = value.substring(0, 12) + '-' + value.substring(12);
+			}
+	
+			e.target.value = value; 
+		});
+	});
+	
+	
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
 	//fancybox
 	Fancybox.bind("[data-fancybox]", {
 		//settings
 	});
+
+
+	
 
 
 	//js popup wrap
@@ -193,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		pagination: false,
 		autoplay: false,
 		navigation: false,
+		initialSlide: 5,
 	});
 
 
